@@ -74,5 +74,5 @@ yarn npm login --publish
 - Individually publish facets-core and facets-plugins
  ```shell script
 yarn workspace @uncharted.software/facets-core npm publish --access=public
-yarn workspace @uncharted.software/facets-plugins npm publish --access-public
+yarn workspace @uncharted.software/facets-plugins npm publish --access=public
 ```
