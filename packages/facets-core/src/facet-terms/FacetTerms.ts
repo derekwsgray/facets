@@ -157,7 +157,7 @@ export class FacetTerms extends FacetContainer {
                         'state': state,
                         'contrast': contrast,
                         '.values': values,
-                        '@click': this.handleMouseClickEvent
+                        '@click': this.handleMouseClickEvent.bind(this),
                     });
                 } else if (type === 'facet-terms-value') {
                     return html`
@@ -168,7 +168,7 @@ export class FacetTerms extends FacetContainer {
                         contrast="${contrast}"
                         .values="${values}"
                         .data="${value}"
-                        @click="${this.handleMouseClickEvent}">
+                        @click="${this.handleMouseClickEvent.bind(this)}">
                     </facet-terms-value>`;
                 }
                 return preHTML`
@@ -179,7 +179,7 @@ export class FacetTerms extends FacetContainer {
                     contrast="${contrast}"
                     .values="${values}"
                     .data="${value}"
-                    @click="${this.handleMouseClickEvent}">
+                    @click="${this.handleMouseClickEvent.bind(this) }">
                 </${type}>`;
             }
             return undefined;
