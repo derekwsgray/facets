@@ -12,6 +12,7 @@ export default defineConfig({
         litCss(),
     ],
     build: {
+        sourcemap: true,
         lib: {
             entry: resolve(__dirname, 'src/index.ts'),
             name: 'FacetsCore',
